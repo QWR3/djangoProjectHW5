@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, CreateAPIView, get_object_or_404, RetrieveUpdateDestroyAPIView
-from .models import UserModel
+from django.contrib.auth import get_user_model
 from .serializers import UserSerializer
 from company.serializers import CompanySerializer
-
+UserModel = get_user_model()
 
 # Create your views here.
 
